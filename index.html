@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Album & Card 圖鑑入口</title>
+    <style>
+        /* 色彩與變數設定 */
+        :root {
+            --royal-blue: #003399; /* 寶藍色主色調 */
+            --dark-blue: #001b54;  /* 深色漸層搭配 */
+            --text-color: #ffffff;
+            --text-muted: rgba(255, 255, 255, 0.85);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            /* 字體設定適中，不突兀 */
+            font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, 'PingFang TC', '微軟正黑體', sans-serif;
+            /* 寶藍色質感漸層背景 */
+            background: linear-gradient(135deg, var(--dark-blue) 0%, var(--royal-blue) 100%);
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px; 
+            box-sizing: border-box;
+        }
+
+        /* 內容容器：使用微微的毛玻璃質感提升精緻度 */
+        .container {
+            width: 85%;
+            max-width: 450px;
+            padding: 40px 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.04); 
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        /* 頂部製作者資訊 */
+        .creator-info {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 35px;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+
+        .creator-info a {
+            color: var(--text-color);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            padding-bottom: 2px;
+            transition: 0.3s;
+        }
+
+        .creator-info a:hover {
+            border-bottom-color: var(--text-color);
+            color: #e0e0e0;
+        }
+
+        /* 按鈕區塊 */
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            width: 100%;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 15px 0;
+            text-align: center;
+            color: var(--text-color);
+            text-decoration: none;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 8px;
+            font-size: 15px;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            background-color: transparent;
+        }
+
+        .btn:hover {
+            background-color: var(--text-color);
+            color: var(--dark-blue);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* 底部注意事項 */
+        .notes {
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.8;
+            text-align: left;
+            width: 100%;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .notes ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .notes li {
+            margin-bottom: 12px;
+        }
+
+        .notes li:last-child {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- 製作者標註 -->
+        <div class="creator-info">
+            製作者 threads : <a href="https://www.threads.net/@sherrykao1314" target="_blank">sherrykao1314</a>
+        </div>
+
+        <!-- 圖鑑入口按鈕 -->
+        <div class="button-group">
+            <a href="https://sherrykao1314.github.io/Yesung/" class="btn">Yesung Album&Card</a>
+            <a href="https://sherrykao1314.github.io/Kyuhyun/" class="btn">Kyuhyun Album&Card</a>
+            <a href="https://sherrykao1314.github.io/D-E/" class="btn">D&E Album&Card</a>
+        </div>
+
+        <!-- 注意事項 -->
+        <div class="notes">
+            <ul>
+                <li>強烈建議把圖鑑網頁加入桌面主畫面，才會紀錄您點選的內容。若有換手機或重灌資料會重置。</li>
+                <li>若有圖鑑上沒有的卡片或專輯，歡迎私訊我的 threads 提供資訊及照片。</li>
+                <li>希望我製作的圖鑑有在追星的路上給大家一點幫助💙💙</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
