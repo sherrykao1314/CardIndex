@@ -2,39 +2,40 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Album & Card 圖鑑入口</title>
+    <!-- 鎖定畫面縮放，避免手機端不小心滑動產生捲軸 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Super Junior Collection</title>
     <style>
         /* 色彩與變數設定 */
         :root {
-            --royal-blue: #003399; /* 寶藍色主色調 */
+            --royal-blue: #003399; /* 寶藍色 */
             --dark-blue: #001b54;  /* 深色漸層搭配 */
             --text-color: #ffffff;
             --text-muted: rgba(255, 255, 255, 0.85);
         }
 
-        body {
+        /* 鎖定畫面大小與捲軸，強制內容居中 */
+        html, body {
             margin: 0;
             padding: 0;
-            /* 字體設定適中，不突兀 */
+            width: 100%;
+            height: 100vh;
+            overflow: hidden; /* 隱藏上下捲軸 */
             font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, 'PingFang TC', '微軟正黑體', sans-serif;
-            /* 寶藍色質感漸層背景 */
             background: linear-gradient(135deg, var(--dark-blue) 0%, var(--royal-blue) 100%);
             color: var(--text-color);
-            min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            font-size: 15px; 
             box-sizing: border-box;
         }
 
-        /* 內容容器：使用微微的毛玻璃質感提升精緻度 */
+        /* 內容容器 */
         .container {
             width: 85%;
-            max-width: 450px;
-            padding: 40px 30px;
+            max-width: 400px; /* 稍微縮減寬度讓視覺更集中 */
+            padding: 30px 25px; /* 調整內距以適應無捲軸畫面 */
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -46,11 +47,20 @@
             -webkit-backdrop-filter: blur(10px);
         }
 
+        /* 主標題 */
+        .main-title {
+            font-size: 22px;
+            font-weight: 600;
+            margin: 0 0 5px 0;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+
         /* 頂部製作者資訊 */
         .creator-info {
-            font-size: 13px;
+            font-size: 12px;
             color: var(--text-muted);
-            margin-bottom: 35px;
+            margin-bottom: 25px;
             letter-spacing: 1px;
             text-align: center;
         }
@@ -72,22 +82,22 @@
         .button-group {
             display: flex;
             flex-direction: column;
-            gap: 18px;
+            gap: 15px; /* 縮小一點間距確保塞得進畫面 */
             width: 100%;
-            margin-bottom: 40px;
+            margin-bottom: 25px;
         }
 
         .btn {
             display: block;
             width: 100%;
             box-sizing: border-box;
-            padding: 15px 0;
+            padding: 12px 0;
             text-align: center;
             color: var(--text-color);
             text-decoration: none;
             border: 1px solid rgba(255, 255, 255, 0.5);
             border-radius: 8px;
-            font-size: 15px;
+            font-size: 14px;
             letter-spacing: 0.5px;
             transition: all 0.3s ease;
             background-color: transparent;
@@ -102,22 +112,22 @@
 
         /* 底部注意事項 */
         .notes {
-            font-size: 13px;
+            font-size: 12px;
             color: var(--text-muted);
-            line-height: 1.8;
+            line-height: 1.6;
             text-align: left;
             width: 100%;
-            padding-top: 25px;
+            padding-top: 15px;
             border-top: 1px solid rgba(255, 255, 255, 0.15);
         }
 
         .notes ul {
             margin: 0;
-            padding-left: 20px;
+            padding-left: 18px;
         }
 
         .notes li {
-            margin-bottom: 12px;
+            margin-bottom: 8px;
         }
 
         .notes li:last-child {
@@ -128,6 +138,9 @@
 <body>
 
     <div class="container">
+        <!-- 英文標題 -->
+        <h1 class="main-title">Super Junior Collection</h1>
+        
         <!-- 製作者標註 -->
         <div class="creator-info">
             製作者 threads : <a href="https://www.threads.net/@sherrykao1314" target="_blank">sherrykao1314</a>
