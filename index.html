@@ -31,11 +31,11 @@
             box-sizing: border-box;
         }
 
-        /* 內容容器 */
+        /* 內容容器：因應內容變多，稍微縮減內距確保不溢出畫面 */
         .container {
             width: 85%;
             max-width: 400px; 
-            padding: 30px 25px; 
+            padding: 25px 20px; 
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -45,8 +45,8 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
-            /* ★ 重心微調：讓整體區塊往上移動 30 像素 */
-            transform: translateY(-30px);
+            /* 保持重心微調稍微偏上 */
+            transform: translateY(-20px); 
         }
 
         /* 主標題 */
@@ -62,7 +62,7 @@
         .creator-info {
             font-size: 12px;
             color: var(--text-muted);
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             letter-spacing: 1px;
             text-align: center;
         }
@@ -84,9 +84,9 @@
         .button-group {
             display: flex;
             flex-direction: column;
-            gap: 15px; 
+            gap: 10px; 
             width: 100%;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
         .btn {
@@ -105,6 +105,7 @@
             background-color: transparent;
         }
 
+        /* 一般圖鑑按鈕懸浮效果 */
         .btn:hover {
             background-color: var(--text-color);
             color: var(--dark-blue);
@@ -112,11 +113,25 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
+        /* 申請帳號專屬按鈕設計 (特別標亮) */
+        .btn-signup {
+            background-color: rgba(255, 255, 255, 0.95);
+            color: var(--dark-blue);
+            font-weight: bold;
+            border: none;
+            margin-bottom: 4px; /* 與下方圖鑑按鈕拉開一點點視覺距離 */
+        }
+
+        .btn-signup:hover {
+            background-color: #ffffff;
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.25);
+        }
+
         /* 底部注意事項 */
         .notes {
             font-size: 12px;
             color: var(--text-muted);
-            line-height: 1.6;
+            line-height: 1.5;
             text-align: left;
             width: 100%;
             padding-top: 15px;
@@ -129,7 +144,7 @@
         }
 
         .notes li {
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .notes li:last-child {
@@ -148,8 +163,12 @@
             製作者 threads : <a href="https://www.threads.net/@sherrykao1314" target="_blank">sherrykao1314</a>
         </div>
 
-        <!-- 圖鑑入口按鈕 -->
+        <!-- 按鈕區塊 -->
         <div class="button-group">
+            <!-- 申請帳號按鈕 (另開視窗) -->
+            <a href="https://script.google.com/macros/s/AKfycbwI3QbG8G6kECVtiDSimHtymPdSPiUjyylxS6XWmacW5DCavVRxicxKOQputg5FgLeD/exec" target="_blank" class="btn btn-signup">申請帳號 (初次使用)</a>
+            
+            <!-- 圖鑑入口按鈕 -->
             <a href="https://sherrykao1314.github.io/Yesung/" class="btn">Yesung Album&Card</a>
             <a href="https://sherrykao1314.github.io/Kyuhyun/" class="btn">Kyuhyun Album&Card</a>
             <a href="https://sherrykao1314.github.io/D-E/" class="btn">D&E Album&Card</a>
@@ -158,9 +177,10 @@
         <!-- 注意事項 -->
         <div class="notes">
             <ul>
-                <li>強烈建議把個別圖鑑網頁加入桌面主畫面，才會紀錄您點選的內容。若有換手機或重灌資料會重置。</li>
-                <li>若有圖鑑上沒有的卡片或專輯，歡迎私訊我的 threads 提供資訊及照片。</li>
-                <li>希望我製作的圖鑑有在追星的路上給大家一點幫助💙💙</li>
+                <li>初次使用請先申請帳號密碼，方便日後紀錄你的資料，且能讓我掌握使用人數及流量是否會過載影響品質。</li>
+                <li>帳號審核約需3-5天，成功後會發送Email通知，資料務必填寫正確。</li>
+                <li>若有圖鑑上沒有的卡片或專輯，歡迎私訊我的 Threads 提供資訊及照片。</li>
+                <li>希望我製作的圖鑑有在追星的路上給大家一點幫助💙💙💙</li>
             </ul>
         </div>
     </div>
